@@ -15,7 +15,7 @@ metadata:
   name: demo-tf
 spec:
   path: ./terraform
-  approvePlan: ""
+  approvePlan: "plan-main-06aee98aa9"
   interval: 60s
   sourceRef:
     kind: GitRepository
