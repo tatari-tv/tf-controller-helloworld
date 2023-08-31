@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: helloworld-tf
+  name: demo-tf
 spec:
   interval: 60s
   url: https://github.com/tatari-tv/tf-controller-helloworld
@@ -12,13 +12,13 @@ spec:
 apiVersion: infra.contrib.fluxcd.io/v1alpha1
 kind: Terraform
 metadata:
-  name: helloworld-tf2
+  name: demo-tf
 spec:
   path: ./terraform
   approvePlan: ""
-  interval: 1m
+  interval: 60s
   sourceRef:
     kind: GitRepository
-    name: helloworld-tf
+    name: demo-tf
   writeOutputsToSecret:
     name: helloworld-outputs
