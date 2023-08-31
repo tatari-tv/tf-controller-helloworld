@@ -4,7 +4,7 @@ kind: GitRepository
 metadata:
   name: helloworld-tf
 spec:
-  interval: 1m
+  interval: 60s
   url: https://github.com/tatari-tv/tf-controller-helloworld
   ref:
     branch: main
